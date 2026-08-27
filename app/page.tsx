@@ -14,10 +14,10 @@ export default function Home() {
           <PoseShowcase />
           <div className="space-y-3">
             <p className="stage-kicker">TODAY&apos;S STAGE</p>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="whitespace-nowrap text-3xl font-bold tracking-tight sm:text-6xl md:text-7xl">
               춤추는 수퍼스타
             </h1>
-            <p className="text-sm text-foreground/70 sm:text-base">
+            <p className="stage-subtitle text-base sm:text-lg">
               연도를 고르고 나만의 무대를 시작해요
             </p>
           </div>
