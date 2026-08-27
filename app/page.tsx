@@ -18,7 +18,7 @@ export default function Home() {
               춤추는 수퍼스타
             </h1>
             <p className="stage-subtitle text-base sm:text-lg">
-              연도를 고르고 나만의 무대를 시작해요
+              연도를 골라 신나게 춤춰봐요!
             </p>
           </div>
         </div>
