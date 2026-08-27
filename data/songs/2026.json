@@ -50,6 +50,16 @@
     "note": "2016년 이후 데뷔 남자 아이돌 그룹 중 최초 퍼펙트 올킬"
   },
   {
+    "id": "2026-05b",
+    "year": 2026,
+    "month": 5,
+    "artist": "aespa",
+    "title": "LEMONADE",
+    "youtubeId": "83C3TZ4Zm_o",
+    "chartSource": "2026년 5월 29일 발매, aespa 2집 'LEMONADE' 타이틀곡",
+    "note": ""
+  },
+  {
     "id": "2026-06",
     "year": 2026,
     "month": 6,
@@ -58,6 +68,16 @@
     "youtubeId": "nkFe9f014dg",
     "chartSource": "멜론 월간차트 2026년 6월 1위 (45일 연속 일간차트 1위)",
     "note": "9년 만의 완전체 컴백"
+  },
+  {
+    "id": "2026-06b",
+    "year": 2026,
+    "month": 6,
+    "artist": "ATEEZ",
+    "title": "BAD",
+    "youtubeId": "-q_S27LbNKU",
+    "chartSource": "2026년 6월 26일 발매, ATEEZ 앨범 'GOLDEN HOUR : Part.5' 타이틀곡",
+    "note": ""
   },
   {
     "id": "2026-07",
