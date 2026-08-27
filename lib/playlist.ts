@@ -52,6 +52,3 @@ export function getYearThumbnailId(year: number): string | undefined {
   return getSongsByYear(year)[0]?.youtubeId;
 }
 
-export function youtubeThumbnailUrl(youtubeId: string): string {
-  return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
-}

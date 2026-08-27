@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-import { getYearThumbnailId, youtubeThumbnailUrl } from "@/lib/playlist";
+import { getYearThumbnailId } from "@/lib/playlist";
+import { youtubeThumbnailUrl } from "@/lib/youtube";
 
 export function YearCard({ year }: { year: number }) {
   const thumbnailId = getYearThumbnailId(year);

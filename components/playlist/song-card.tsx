@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { youtubeThumbnailUrl, type Song } from "@/lib/playlist";
+import type { Song } from "@/lib/playlist";
+import { youtubeThumbnailUrl } from "@/lib/youtube";
 
 export function SongCard({ song }: { song: Song }) {
   return (

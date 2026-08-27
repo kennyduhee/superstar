@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
-import { SongCard } from "@/components/playlist/song-card";
+import { SongList } from "@/components/playlist/song-list";
 import { getSongsByYear, getYears } from "@/lib/playlist";
 
 export function generateStaticParams() {
@@ -37,11 +37,7 @@ export default async function YearPage({
           </Button>
           <h1 className="text-2xl font-bold">{year}년 인기곡</h1>
         </div>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-          {songs.map((song) => (
-            <SongCard key={song.id} song={song} />
-          ))}
-        </div>
+        <SongList songs={songs} />
       </main>
     </div>
   );
