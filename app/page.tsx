@@ -1,4 +1,14 @@
 import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -62,6 +72,34 @@ export default function Home() {
           >
             Documentation
           </a>
+        </div>
+        <div className="flex w-full flex-col gap-4">
+          <div className="flex items-center gap-2">
+            <h2 className="text-sm font-semibold text-foreground">
+              테마 미리보기
+            </h2>
+            <Badge>preset b1dVJGr1FY</Badge>
+            <Badge variant="secondary">secondary</Badge>
+            <Badge variant="outline">outline</Badge>
+          </div>
+          <Card>
+            <CardHeader>
+              <CardTitle>shadcn 컴포넌트</CardTitle>
+              <CardDescription>
+                적용된 테마 색상을 확인하기 위한 카드입니다.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex flex-wrap gap-2">
+              <Button>Default</Button>
+              <Button variant="secondary">Secondary</Button>
+              <Button variant="outline">Outline</Button>
+              <Button variant="ghost">Ghost</Button>
+              <Button variant="destructive">Destructive</Button>
+            </CardContent>
+            <CardFooter>
+              <Button variant="link">Link 버튼</Button>
+            </CardFooter>
+          </Card>
         </div>
       </main>
     </div>
