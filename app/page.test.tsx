@@ -8,7 +8,7 @@ test("홈 화면은 앱 제목과 연도별 링크를 보여준다", () => {
   render(<Home />);
 
   expect(
-    screen.getByRole("heading", { level: 1, name: "수퍼스타" })
+    screen.getByRole("heading", { level: 1, name: "춤추는 수퍼스타" })
   ).toBeInTheDocument();
 
   const years = getYears();

@@ -128,3 +128,135 @@
     @apply font-sans;
   }
 }
+
+.stage-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 8%, oklch(0.98 0.12 92 / 0.34), transparent 28rem),
+    linear-gradient(145deg, oklch(0.18 0.04 350), oklch(0.11 0.03 24) 62%, oklch(0.18 0.04 55));
+  color: oklch(0.98 0.02 92);
+}
+
+.stage-shell::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(oklch(1 0 0 / 0.12) 1px, transparent 1px);
+  background-size: 18px 18px;
+  content: "";
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+  opacity: 0.2;
+}
+
+.stage-curtain {
+  position: absolute;
+  top: -4rem;
+  z-index: 20;
+  width: min(19vw, 15rem);
+  height: 24rem;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    90deg,
+    oklch(0.25 0.1 25) 0,
+    oklch(0.39 0.16 28) 18%,
+    oklch(0.21 0.08 22) 36%
+  );
+  box-shadow: 0 1rem 2rem oklch(0 0 0 / 0.25);
+  opacity: 0.9;
+}
+
+.stage-curtain-left {
+  left: 0;
+  border-radius: 0 0 70% 0;
+  transform: translateX(-58%) rotate(5deg);
+}
+
+.stage-curtain-right {
+  right: 0;
+  border-radius: 0 0 0 70%;
+  transform: translateX(58%) rotate(-5deg);
+}
+
+.stage-heading {
+  animation: stage-rise 700ms ease-out both;
+}
+
+.pose-showcase {
+  width: 7.5rem;
+  height: 7.5rem;
+  flex: 0 0 auto;
+  border: 3px solid oklch(0.98 0.02 92 / 0.9);
+  border-radius: 50%;
+  background-color: oklch(0.95 0.08 82);
+  background-image: url("/daughter-poses.png");
+  background-repeat: no-repeat;
+  background-size: 400% 200%;
+  box-shadow: 0 0 0 0.5rem oklch(0.98 0.02 92 / 0.08), 0 0.8rem 2rem oklch(0 0 0 / 0.28);
+  transition: background-position 180ms ease-out;
+}
+
+@media (max-width: 639px) {
+  .pose-showcase {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+
+.stage-kicker {
+  color: oklch(0.84 0.15 87);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.stage-year-grid > a {
+  animation: stage-rise 600ms ease-out both;
+}
+
+.stage-year-grid > a:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.stage-year-grid > a:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.stage-floor {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 10rem;
+  z-index: -1;
+  transform: perspective(18rem) rotateX(48deg) translateY(5rem);
+  background: repeating-linear-gradient(
+    90deg,
+    oklch(0.72 0.13 70 / 0.18) 0 1px,
+    transparent 1px 4rem
+  );
+  mask-image: linear-gradient(to bottom, transparent, black);
+}
+
+@keyframes stage-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage-heading,
+  .stage-year-grid > a {
+    animation: none;
+  }
+
+  .pose-showcase {
+    transition: none;
+  }
+}
