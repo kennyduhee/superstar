@@ -2,15 +2,21 @@ import { render, screen } from "@testing-library/react";
 import { expect, test } from "vitest";
 
 import Home from "@/app/page";
+import { getYears } from "@/lib/playlist";
 
-test("홈 화면은 시작 안내 제목과 배포 링크를 보여준다", () => {
+test("홈 화면은 앱 제목과 연도별 링크를 보여준다", () => {
   render(<Home />);
 
   expect(
-    screen.getByRole("heading", { level: 1, name: /시작하려면/i })
+    screen.getByRole("heading", { level: 1, name: "수퍼스타" })
   ).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: /Deploy Now/i })).toHaveAttribute(
-    "href",
-    expect.stringContaining("vercel.com/new")
-  );
+
+  const years = getYears();
+  expect(years.length).toBeGreaterThan(0);
+  for (const year of years) {
+    expect(screen.getByRole("link", { name: String(year) })).toHaveAttribute(
+      "href",
+      `/${year}`
+    );
+  }
 });
